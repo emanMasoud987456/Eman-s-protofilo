@@ -1,0 +1,1776 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eman Masoud Hamed ✨</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        cursor: none !important;
+      }
+
+      #cursor-dot {
+        width: 12px;
+        height: 12px;
+        background: #ff6b8a;
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 99999;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease;
+        box-shadow:
+          0 0 8px #ff6b8a,
+          0 0 16px #ff6b8a88;
+      }
+      #cursor-ring {
+        width: 36px;
+        height: 36px;
+        border: 2px solid #ff6b8a99;
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 99998;
+        transform: translate(-50%, -50%);
+        transition:
+          transform 0.18s ease,
+          width 0.2s,
+          height 0.2s,
+          border-color 0.2s;
+      }
+      #cursor-heart {
+        position: fixed;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+        pointer-events: none;
+        z-index: 99997;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.15s;
+      }
+
+      :root {
+        --crimson: #6b0a1a;
+        --deep-red: #8b1a2a;
+        --rose: #c0394f;
+        --blush: #ff6b8a;
+        --petal: #ffb3c1;
+        --cream: #fff0f3;
+        --gold: #e8c96a;
+        --white: #ffffff;
+        --text-light: #ffd6e0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Nunito", sans-serif;
+        background: var(--crimson);
+        color: var(--text-light);
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 120% 60% at 20% 30%,
+            #9b1a3022 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 80% 80% at 80% 70%,
+            #5a0a1533 0%,
+            transparent 60%
+          );
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      section {
+        position: relative;
+        z-index: 1;
+      }
+
+      .petal-layer {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+      .petal {
+        position: absolute;
+        font-size: 1.1rem;
+        opacity: 0.25;
+        animation: petalFall linear infinite;
+      }
+      @keyframes petalFall {
+        0% {
+          transform: translateY(-60px) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.3;
+        }
+        90% {
+          opacity: 0.15;
+        }
+        100% {
+          transform: translateY(110vh) rotate(720deg);
+          opacity: 0;
+        }
+      }
+
+      .navbar {
+        background: rgba(60, 5, 12, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid #ff6b8a33;
+        padding: 0.8rem 0;
+      }
+      .navbar-brand {
+        font-family: "Dancing Script", cursive;
+        font-size: 1.8rem;
+        color: var(--petal) !important;
+        text-shadow: 0 0 12px #ff6b8a66;
+      }
+      .nav-link {
+        color: var(--text-light) !important;
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+        padding: 0.4rem 1rem !important;
+        border-radius: 20px;
+        transition: all 0.3s;
+        position: relative;
+      }
+      .nav-link::after {
+        content: "✿";
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%) scale(0);
+        font-size: 0.6rem;
+        color: var(--blush);
+        transition: transform 0.3s;
+      }
+      .nav-link:hover {
+        color: var(--petal) !important;
+        background: rgba(255, 107, 138, 0.15);
+      }
+      .nav-link:hover::after {
+        transform: translateX(-50%) scale(1);
+      }
+
+      #hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 100px 20px 60px;
+        overflow: hidden;
+      }
+
+      .hero-content {
+        position: relative;
+      }
+
+      .hero-crown {
+        font-size: 2.5rem;
+        animation: floatBounce 2.5s ease-in-out infinite;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      @keyframes floatBounce {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-5deg);
+        }
+        50% {
+          transform: translateY(-12px) rotate(5deg);
+        }
+      }
+
+      .hero-name {
+        font-family: "Dancing Script", cursive;
+        font-size: clamp(2.8rem, 7vw, 5.5rem);
+        color: var(--white);
+        text-shadow:
+          0 0 30px #ff6b8a88,
+          0 4px 20px rgba(0, 0, 0, 0.4);
+        line-height: 1.1;
+        animation: nameReveal 1.2s cubic-bezier(0.23, 1.02, 0.52, 1) both;
+      }
+      @keyframes nameReveal {
+        0% {
+          opacity: 0;
+          transform: translateY(40px) scale(0.9);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .hero-greeting {
+        font-size: clamp(1rem, 2.5vw, 1.4rem);
+        color: var(--petal);
+        font-weight: 300;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        animation: fadeSlideUp 1.4s 0.3s both;
+      }
+
+      .hero-sub {
+        font-size: clamp(1rem, 2.2vw, 1.25rem);
+        color: var(--text-light);
+        max-width: 560px;
+        margin: 1.2rem auto 0;
+        line-height: 1.7;
+        animation: fadeSlideUp 1.4s 0.6s both;
+      }
+
+      @keyframes fadeSlideUp {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero-divider {
+        width: 120px;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--blush),
+          transparent
+        );
+        margin: 1.5rem auto;
+        animation: fadeSlideUp 1.4s 0.9s both;
+      }
+
+      .hero-badges {
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2rem;
+        animation: fadeSlideUp 1.4s 1.1s both;
+      }
+      .hero-badge {
+        background: rgba(255, 107, 138, 0.15);
+        border: 1px solid #ff6b8a55;
+        color: var(--petal);
+        border-radius: 50px;
+        padding: 0.35rem 1.1rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        backdrop-filter: blur(6px);
+        transition: all 0.3s;
+      }
+      .hero-badge:hover {
+        background: rgba(255, 107, 138, 0.35);
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 6px 20px #ff6b8a44;
+      }
+
+      #hero:hover .hero-name {
+        text-shadow:
+          0 0 50px #ff6b8aaa,
+          0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .scroll-hint {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bounce 2s infinite;
+        font-size: 1.5rem;
+        color: var(--blush);
+        opacity: 0.6;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        50% {
+          transform: translateX(-50%) translateY(8px);
+        }
+      }
+
+      #about {
+        padding: 100px 0;
+        background: linear-gradient(180deg, var(--crimson) 0%, #4a0813 100%);
+      }
+
+      .section-title {
+        font-family: "Dancing Script", cursive;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        color: var(--white);
+        text-align: center;
+        margin-bottom: 0.3rem;
+        text-shadow: 0 0 20px #ff6b8a55;
+      }
+      .section-sub {
+        text-align: center;
+        color: var(--blush);
+        letter-spacing: 3px;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+      }
+
+      .id-card-wrap {
+        perspective: 1000px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .id-card {
+        background: linear-gradient(145deg, #2a0509, #5a0a18);
+        border: 2px solid #ff6b8a55;
+        border-radius: 20px;
+        width: 260px;
+        padding: 24px 20px 20px;
+        text-align: center;
+        box-shadow:
+          0 20px 60px rgba(0, 0, 0, 0.5),
+          inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        position: relative;
+        cursor: grab !important;
+        user-select: none;
+        transform-style: preserve-3d;
+        animation: slideFromTop 1s 0.3s cubic-bezier(0.23, 1.02, 0.52, 1) both;
+        transition: box-shadow 0.3s;
+      }
+      @keyframes slideFromTop {
+        0% {
+          opacity: 0;
+          transform: translateY(-120px) rotateX(25deg);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) rotateX(0deg);
+        }
+      }
+      .id-card:active {
+        cursor: grabbing !important;
+      }
+      .id-card:hover {
+        box-shadow:
+          0 30px 80px rgba(0, 0, 0, 0.6),
+          0 0 40px #ff6b8a22,
+          inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      }
+
+      .id-photo-wrap {
+        position: relative;
+        width: 130px;
+        height: 130px;
+        margin: 0 auto 14px;
+      }
+      .id-photo-wrap::before {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        background: conic-gradient(
+          #e8c96a 0deg,
+          #ff6b8a 60deg,
+          #c0394f 120deg,
+          #e8c96a 180deg,
+          #ff6b8a 240deg,
+          #c0394f 300deg,
+          #e8c96a 360deg
+        );
+        animation: spinBorder 6s linear infinite;
+      }
+      @keyframes spinBorder {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .id-photo-wrap::after {
+        content: "";
+        position: absolute;
+        inset: -3px;
+        border-radius: 50%;
+        background: #2a0509;
+      }
+      .id-photo {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;
+        position: relative;
+        z-index: 2;
+        display: block;
+        filter: brightness(1.08) contrast(1.05) saturate(1.1);
+      }
+      .id-photo-placeholder {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background: linear-gradient(145deg, #5a0a18, #8b1a2a);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        font-size: 2.5rem;
+        color: var(--petal);
+      }
+      .id-photo-placeholder small {
+        font-size: 0.55rem;
+        font-family: "Nunito", sans-serif;
+        margin-top: 4px;
+        color: var(--blush);
+        text-align: center;
+        line-height: 1.3;
+      }
+
+      .id-card-tag {
+        background: var(--blush);
+        color: #fff;
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        padding: 2px 8px;
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+      .id-card-name {
+        font-family: "Playfair Display", serif;
+        font-size: 1.1rem;
+        color: var(--white);
+        margin: 4px 0 2px;
+        font-weight: 700;
+      }
+      .id-card-title {
+        font-size: 0.72rem;
+        color: var(--petal);
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
+      }
+      .id-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #ff6b8a55, transparent);
+        margin: 8px 0;
+      }
+      .id-info {
+        font-size: 0.7rem;
+        color: var(--text-light);
+        line-height: 1.8;
+      }
+      .id-info span {
+        color: var(--petal);
+        font-weight: 700;
+      }
+      .id-ribbon {
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 22px;
+        background: var(--blush);
+        border-radius: 2px;
+      }
+      .id-ribbon::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 12px;
+        height: 12px;
+        background: var(--gold);
+        border-radius: 50%;
+        box-shadow: 0 0 8px var(--gold);
+      }
+
+      /* hearts pop on hover */
+      .id-card .hearts-container {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .heart-pop {
+        position: absolute;
+        font-size: 1rem;
+        opacity: 0;
+        animation: heartPop 1.2s ease-out forwards;
+      }
+      @keyframes heartPop {
+        0% {
+          opacity: 1;
+          transform: translateY(0) scale(0.5);
+        }
+        50% {
+          opacity: 0.9;
+          transform: translateY(-50px) scale(1.2);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-100px) scale(0.8);
+        }
+      }
+
+      /* about text */
+      .about-text-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid #ff6b8a22;
+        border-radius: 20px;
+        padding: 2.5rem;
+        backdrop-filter: blur(8px);
+        transition: all 0.4s;
+        height: 100%;
+      }
+      .about-text-card:hover {
+        background: rgba(255, 107, 138, 0.06);
+        border-color: #ff6b8a55;
+        box-shadow: 0 0 40px rgba(255, 107, 138, 0.1);
+      }
+      .about-text-card h3 {
+        font-family: "Dancing Script", cursive;
+        font-size: 2rem;
+        color: var(--petal);
+        margin-bottom: 1rem;
+      }
+      .about-text-card p {
+        color: var(--text-light);
+        line-height: 1.9;
+        font-size: 0.95rem;
+      }
+      .about-pill {
+        display: inline-block;
+        background: rgba(255, 107, 138, 0.18);
+        border: 1px solid #ff6b8a44;
+        color: var(--petal);
+        border-radius: 50px;
+        padding: 0.25rem 0.9rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        margin: 0.2rem;
+        transition: all 0.3s;
+      }
+      .about-pill:hover {
+        background: rgba(255, 107, 138, 0.35);
+        transform: scale(1.05);
+      }
+
+      /* ===== SKILLS SECTION ===== */
+      #skills {
+        padding: 100px 0;
+        background: linear-gradient(180deg, #4a0813 0%, #3a060f 100%);
+      }
+
+      .skill-card {
+        background: linear-gradient(
+          145deg,
+          rgba(90, 10, 24, 0.6),
+          rgba(40, 4, 10, 0.8)
+        );
+        border: 1px solid #ff6b8a33;
+        border-radius: 24px;
+        padding: 2rem;
+        cursor: pointer !important;
+        transition: all 0.45s cubic-bezier(0.23, 1.02, 0.52, 1);
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+      }
+      .skill-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 107, 138, 0.1) 0%,
+          transparent 60%
+        );
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
+      .skill-card:hover::before {
+        opacity: 1;
+      }
+      .skill-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        border-color: #ff6b8a88;
+        box-shadow:
+          0 20px 60px rgba(255, 107, 138, 0.2),
+          0 0 0 1px rgba(255, 107, 138, 0.15);
+      }
+      .skill-card.open {
+        transform: scale(1.02);
+        border-color: var(--blush);
+        box-shadow: 0 30px 80px rgba(255, 107, 138, 0.25);
+      }
+
+      .card-icon {
+        font-size: 2.8rem;
+        margin-bottom: 0.8rem;
+        display: block;
+        animation: iconWiggle 3s ease-in-out infinite;
+      }
+      @keyframes iconWiggle {
+        0%,
+        100% {
+          transform: rotate(-5deg);
+        }
+        50% {
+          transform: rotate(5deg);
+        }
+      }
+      .skill-card-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.3rem;
+        color: var(--white);
+        margin-bottom: 0.4rem;
+      }
+      .skill-card-subtitle {
+        font-size: 0.8rem;
+        color: var(--blush);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+      .skill-tag {
+        display: inline-block;
+        background: rgba(255, 107, 138, 0.15);
+        border: 1px solid #ff6b8a44;
+        color: var(--petal);
+        border-radius: 20px;
+        padding: 0.2rem 0.7rem;
+        font-size: 0.75rem;
+        margin: 0.2rem;
+        transition: all 0.25s;
+      }
+      .skill-tag:hover {
+        background: rgba(255, 107, 138, 0.35);
+        transform: scale(1.08);
+      }
+
+      /* expandable detail */
+      .skill-detail {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.6s cubic-bezier(0.23, 1.02, 0.52, 1),
+          opacity 0.4s;
+        opacity: 0;
+      }
+      .skill-detail.open {
+        max-height: 600px;
+        opacity: 1;
+      }
+      .skill-detail-inner {
+        margin-top: 1.2rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid #ff6b8a33;
+      }
+      .skill-detail p {
+        font-size: 0.88rem;
+        color: var(--text-light);
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      /* skill progress bar */
+      .skill-bar-wrap {
+        margin: 0.4rem 0;
+      }
+      .skill-bar-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.78rem;
+        color: var(--petal);
+        margin-bottom: 4px;
+      }
+      .skill-bar-track {
+        height: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .skill-bar-fill {
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          var(--rose),
+          var(--blush),
+          var(--gold)
+        );
+        border-radius: 10px;
+        width: 0%;
+        transition: width 1.2s cubic-bezier(0.23, 1.02, 0.52, 1) 0.2s;
+      }
+      .skill-card.open .skill-bar-fill {
+        width: var(--w);
+      }
+
+      /* click hint */
+      .click-hint {
+        font-size: 0.7rem;
+        color: var(--blush);
+        text-align: right;
+        margin-top: 0.8rem;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+      }
+      .skill-card.open .click-hint {
+        opacity: 0;
+      }
+
+      /* sparkle burst on card click */
+      .burst {
+        position: absolute;
+        pointer-events: none;
+        font-size: 1rem;
+      }
+      .burst-pop {
+        animation: burstAnim 0.8s ease-out forwards;
+      }
+      @keyframes burstAnim {
+        0% {
+          opacity: 1;
+          transform: scale(0) translateY(0);
+        }
+        60% {
+          opacity: 1;
+          transform: scale(1.4) translateY(-25px);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0.8) translateY(-55px);
+        }
+      }
+
+      /* ===== CONTACT SECTION ===== */
+      #contact {
+        padding: 100px 0;
+        background: linear-gradient(180deg, #3a060f 0%, var(--crimson) 100%);
+      }
+
+      .contact-card {
+        background: linear-gradient(
+          145deg,
+          rgba(90, 10, 24, 0.5),
+          rgba(40, 4, 10, 0.7)
+        );
+        border: 1px solid #ff6b8a33;
+        border-radius: 24px;
+        padding: 3rem;
+        backdrop-filter: blur(10px);
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .contact-card:hover {
+        border-color: #ff6b8a66;
+        box-shadow: 0 0 60px rgba(255, 107, 138, 0.12);
+      }
+
+      .contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: rgba(255, 107, 138, 0.12);
+        border: 1px solid #ff6b8a44;
+        color: var(--petal) !important;
+        border-radius: 50px;
+        padding: 0.6rem 1.4rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.35s;
+        margin: 0.4rem;
+      }
+      .contact-link:hover {
+        background: rgba(255, 107, 138, 0.3);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(255, 107, 138, 0.25);
+        color: var(--white) !important;
+      }
+
+      .contact-input {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid #ff6b8a44;
+        border-radius: 12px;
+        color: var(--text-light);
+        padding: 0.75rem 1.2rem;
+        width: 100%;
+        font-family: "Nunito", sans-serif;
+        font-size: 0.9rem;
+        transition: all 0.3s;
+        outline: none;
+        margin-bottom: 1rem;
+      }
+      .contact-input:focus {
+        border-color: var(--blush);
+        background: rgba(255, 107, 138, 0.08);
+        box-shadow: 0 0 0 3px rgba(255, 107, 138, 0.15);
+      }
+      .contact-input::placeholder {
+        color: #c07a8888;
+      }
+
+      .btn-send {
+        background: linear-gradient(135deg, var(--rose), var(--blush));
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 0.75rem 2.5rem;
+        font-family: "Nunito", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        transition: all 0.35s;
+        cursor: none !important;
+        box-shadow: 0 6px 20px rgba(255, 107, 138, 0.3);
+      }
+      .btn-send:hover {
+        transform: translateY(-3px) scale(1.04);
+        box-shadow: 0 12px 30px rgba(255, 107, 138, 0.45);
+      }
+      .btn-send:active {
+        transform: scale(0.97);
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        text-align: center;
+        padding: 2rem;
+        background: #3a060f;
+        color: #c07a88;
+        font-size: 0.82rem;
+        border-top: 1px solid #ff6b8a22;
+      }
+      footer span {
+        color: var(--blush);
+      }
+
+      /* ===== TOAST ===== */
+      .cute-toast {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: linear-gradient(135deg, #5a0a18, #8b1a2a);
+        border: 1px solid var(--blush);
+        color: var(--petal);
+        border-radius: 16px;
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        z-index: 9999;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.5s cubic-bezier(0.23, 1.02, 0.52, 1);
+      }
+      .cute-toast.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      /* ===== FLOATING HEARTS (scroll triggered) ===== */
+      .float-heart {
+        position: fixed;
+        font-size: 1.2rem;
+        pointer-events: none;
+        z-index: 0;
+        animation: floatUp 4s ease-in forwards;
+      }
+      @keyframes floatUp {
+        0% {
+          opacity: 0.8;
+          transform: translateY(0) scale(0.8);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-200px) scale(1.3);
+        }
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 768px) {
+        .id-card {
+          width: 220px;
+        }
+        .about-text-card {
+          margin-top: 2rem;
+        }
+        .contact-card {
+          padding: 2rem 1.5rem;
+        }
+      }
+
+      /* scroll reveal base */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s cubic-bezier(0.23, 1.02, 0.52, 1);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+    <div id="cursor-heart">🌸</div>
+
+    <!-- Falling petals bg -->
+    <div class="petal-layer" id="petalLayer"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#hero">Eman ✨</a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          style="color: var(--petal)"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+          <ul class="navbar-nav gap-1">
+            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <canvas
+        id="three-canvas"
+        style="
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+        "
+      ></canvas>
+      <div
+        id="starLayer"
+        style="
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          z-index: 1;
+          overflow: hidden;
+        "
+      ></div>
+      <div class="hero-content" style="position: relative; z-index: 2">
+        <span class="hero-crown">👑</span>
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Eman Masoud Hamed</h1>
+        <div class="hero-divider"></div>
+        <p class="hero-sub">
+          Junior AI student with foundational knowledge in machine learning —
+          passionate about technology, design & building the future with
+          elegance 🌸
+        </p>
+        <div class="hero-badges">
+          <span class="hero-badge">🤖 AI Student</span>
+          <span class="hero-badge">🧠 Machine Learning</span>
+          <span class="hero-badge">🐍 Python</span>
+          <span class="hero-badge">✨ Tech Enthusiast</span>
+          <span class="hero-badge">⚡ Electricity</span>
+          <span class="hero-badge">💻 Web Dev</span>
+        </div>
+      </div>
+      <div class="scroll-hint" style="z-index: 2">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title reveal">About Me</h2>
+        <p class="section-sub reveal">my little story ✦</p>
+
+        <div class="row align-items-center g-4">
+          <!-- ID Card -->
+          <div class="col-lg-4 col-md-5 reveal">
+            <div class="id-card-wrap">
+              <div class="id-card" id="idCard">
+                <div class="id-ribbon"></div>
+                <div class="hearts-container" id="cardHearts"></div>
+
+                <div class="id-photo-wrap">
+                  <img
+                    src="./WhatsApp Image 2026-05-30 at 5.14.13 PM.jpeg"
+                    alt="Eman Masoud Hamed"
+                    class="id-photo"
+                  />
+                </div>
+
+                <div class="id-card-tag">✦ ID CARD ✦</div>
+                <div class="id-card-name">Eman Masoud Hamed</div>
+                <div class="id-card-title">Junior AI Student</div>
+                <div class="id-divider"></div>
+                <div class="id-info">
+                  <span>🎓 Field:</span> Artificial Intelligence<br />
+                  <span>⚡ Background:</span> Electrical & Tech<br />
+                  <span>🌍 Location:</span> Egypt<br />
+                  <span>💡 Passion:</span> Tech & Design
+                </div>
+              </div>
+            </div>
+            <p
+              style="
+                text-align: center;
+                font-size: 0.72rem;
+                color: var(--blush);
+                margin-top: 0.6rem;
+                opacity: 0.7;
+              "
+            >
+              ✦ drag me around ✦
+            </p>
+          </div>
+
+          <!-- About Text -->
+          <div class="col-lg-8 col-md-7 reveal">
+            <div class="about-text-card">
+              <h3>My Story 📖</h3>
+              <p>
+                Hi! I'm
+                <strong style="color: var(--petal)">Eman Masoud Hamed</strong> —
+                a passionate and curious soul on a beautiful journey through the
+                world of Artificial Intelligence. I'm currently building my
+                foundations in machine learning, exploring how intelligent
+                systems learn, adapt, and solve real-world problems. 🌸
+              </p>
+              <p>
+                My story with technology started early — I specialized in
+                <strong style="color: var(--petal)"
+                  >Technology & Clothes</strong
+                >
+                in high school, blending creativity with precision. Then I dived
+                into
+                <strong style="color: var(--petal)"
+                  >Electrical Engineering</strong
+                >
+                in college, which gave me a strong technical backbone and love
+                for how things work under the hood. ⚡
+              </p>
+              <p>
+                Today, I bring together all these worlds: design aesthetics,
+                electrical thinking, and the magic of AI. I believe technology
+                should be beautiful, powerful, and accessible — and I'm here to
+                make that happen, one project at a time. 💻✨
+              </p>
+              <div class="mt-3">
+                <span class="about-pill">🎀 Creative</span>
+                <span class="about-pill">🧪 Analytical</span>
+                <span class="about-pill">💄 Design Lover</span>
+                <span class="about-pill">⚡ Electrical</span>
+                <span class="about-pill">🤖 AI Enthusiast</span>
+                <span class="about-pill">🌹 Tech Fashionista</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title reveal">Technical Skills</h2>
+        <p class="section-sub reveal">click a card to discover more ✿</p>
+
+        <div class="row g-4">
+          <!-- Card 1: Web Dev -->
+          <div class="col-lg-4 col-md-6 reveal">
+            <div class="skill-card" id="card1" onclick="toggleCard('card1')">
+              <span class="card-icon">🌐</span>
+              <div class="skill-card-title">Web Development</div>
+              <div class="skill-card-subtitle">Frontend Foundations</div>
+              <div>
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Bootstrap</span>
+                <span class="skill-tag">Responsive Design</span>
+              </div>
+              <div class="skill-detail" id="detail1">
+                <div class="skill-detail-inner">
+                  <p>
+                    Building beautiful, responsive web pages is my playground! I
+                    craft layouts with semantic HTML, style them with creative
+                    CSS animations, and bring them to life with JavaScript. I
+                    love making things that are both functional AND gorgeous. 💅
+                  </p>
+                  <div class="skill-bar-wrap">
+                    <div class="skill-bar-label">
+                      <span>HTML / CSS</span><span>80%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                      <div class="skill-bar-fill" style="--w: 80%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-bar-wrap">
+                    <div class="skill-bar-label">
+                      <span>JavaScript</span><span>65%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                      <div class="skill-bar-fill" style="--w: 65%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-bar-wrap">
+                    <div class="skill-bar-label">
+                      <span>Bootstrap</span><span>75%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                      <div class="skill-bar-fill" style="--w: 75%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="click-hint">tap to explore ✨</div>
+            </div>
+          </div>
+
+          <!-- Card 2: ML / Python / Design -->
+          <div class="col-lg-4 col-md-6 reveal">
+            <div class="skill-card" id="card2" onclick="toggleCard('card2')">
+              <span class="card-icon">🧠</span>
+              <div class="skill-card-title">Machine Learning & Python</div>
+              <div class="skill-card-subtitle">AI Core + Design Nails 💅</div>
+              <div>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">ML Basics</span>
+                <span class="skill-tag">Numpy</span>
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Canva</span>
+              </div>
+              <div class="skill-detail" id="detail2">
+                <div class="skill-detail-inner">
+                  <p>
+                    Python is my primary language for exploring machine learning
+                    — from data preprocessing with Pandas to building ML models.
+                    I also bring a design eye to everything I create, using
+                    Figma and Canva to make tech feel pretty. 🌸
+                  </p>
+                  <div class="skill-bar-wrap">
+                    <div class="skill-bar-label">
+                      <span>Python</span><span>70%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                      <div class="skill-bar-fill" style="--w: 70%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-bar-wrap">
+                    <div class="skill-bar-label">
+                      <span>ML Fundamentals</span><span>60%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                      <div class="skill-bar-fill" style="--w: 60%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-bar-wrap">
+                    <div class="skill-bar-label">
+                      <span>Design (Figma/Canva)</span><span>80%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                      <div class="skill-bar-fill" style="--w: 80%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="click-hint">tap to explore ✨</div>
+            </div>
+          </div>
+
+          <!-- Card 3: AI Tools + Electrical + Fashion Tech -->
+          <div class="col-lg-4 col-md-6 reveal">
+            <div class="skill-card" id="card3" onclick="toggleCard('card3')">
+              <span class="card-icon">⚡</span>
+              <div class="skill-card-title">AI Tools & Tech Expertise</div>
+              <div class="skill-card-subtitle">
+                Electric Mind, Digital Heart 🌹
+              </div>
+              <div>
+                <span class="skill-tag">ChatGPT</span>
+                <span class="skill-tag">Midjourney</span>
+                <span class="skill-tag">Claude</span>
+                <span class="skill-tag">Electricity Basics</span>
+                <span class="skill-tag">Tech Fashion</span>
+                <span class="skill-tag">Circuit Concepts</span>
+              </div>
+              <div class="skill-detail" id="detail3">
+                <div class="skill-detail-inner">
+                  <p>
+                    I leverage modern AI tools professionally — from generating
+                    content with LLMs to creating visuals with image AI. My
+                    electrical engineering background adds an analytical edge,
+                    and my tech fashion specialization makes me see design &
+                    function as one. ✨⚡
+                  </p>
+                  <div class="skill-bar-wrap">
+                    <div class="skill-bar-label">
+                      <span>AI Tools (ChatGPT, Claude…)</span><span>85%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                      <div class="skill-bar-fill" style="--w: 85%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-bar-wrap">
+                    <div class="skill-bar-label">
+                      <span>Electrical Fundamentals</span><span>72%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                      <div class="skill-bar-fill" style="--w: 72%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-bar-wrap">
+                    <div class="skill-bar-label">
+                      <span>Tech Fashion / Textiles</span><span>88%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                      <div class="skill-bar-fill" style="--w: 88%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="click-hint">tap to explore ✨</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title reveal">Let's Connect</h2>
+        <p class="section-sub reveal">say hello to me 💌</p>
+
+        <div class="contact-card reveal">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem">🌸</div>
+          <h3
+            style="
+              font-family: &quot;Dancing Script&quot;, cursive;
+              font-size: 1.8rem;
+              color: var(--petal);
+              margin-bottom: 0.5rem;
+            "
+          >
+            Drop me a message!
+          </h3>
+          <p
+            style="
+              color: var(--text-light);
+              font-size: 0.9rem;
+              margin-bottom: 1.5rem;
+            "
+          >
+            Whether it's a collaboration, a question, or just a hello — I'd love
+            to hear from you! 💕
+          </p>
+
+          <!-- Quick links -->
+          <div class="mb-3">
+            <a href="mailto:eman@example.com" class="contact-link">
+              <i class="fas fa-envelope"></i> Email Me
+            </a>
+            <a href="#" class="contact-link">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="#" class="contact-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+
+          <div
+            style="
+              height: 1px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                #ff6b8a33,
+                transparent
+              );
+              margin: 1.5rem 0;
+            "
+          ></div>
+
+          <!-- Mini form -->
+          <input
+            type="text"
+            class="contact-input"
+            placeholder="Your name 🌷"
+            id="msgName"
+          />
+          <input
+            type="email"
+            class="contact-input"
+            placeholder="Your email 💌"
+            id="msgEmail"
+          />
+          <textarea
+            class="contact-input"
+            rows="4"
+            placeholder="Your message 🌸"
+            id="msgBody"
+            style="resize: none"
+          ></textarea>
+          <button class="btn-send" onclick="sendMsg()">Send Message 💌</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      Made with <span>♥</span> by <span>Eman Masoud Hamed</span> · 2025 · All
+      rights reserved 🌸
+    </footer>
+
+    <!-- Toast -->
+    <div class="cute-toast" id="toast">
+      💌 Message sent! Thank you so much ✨
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+      /* ===== CUSTOM CURSOR ===== */
+      const dot = document.getElementById("cursor-dot");
+      const ring = document.getElementById("cursor-ring");
+      const heart = document.getElementById("cursor-heart");
+      let mx = 0,
+        my = 0,
+        rx = 0,
+        ry = 0;
+
+      document.addEventListener("mousemove", (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+        dot.style.left = mx + "px";
+        dot.style.top = my + "px";
+        heart.style.left = mx + "px";
+        heart.style.top = my - 22 + "px";
+        heart.style.opacity = "0.7";
+        clearTimeout(heart._t);
+        heart._t = setTimeout(() => (heart.style.opacity = "0"), 1200);
+      });
+
+      // smooth ring follow
+      function animateRing() {
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.left = rx + "px";
+        ring.style.top = ry + "px";
+        requestAnimationFrame(animateRing);
+      }
+      animateRing();
+
+      document.addEventListener("mousedown", () => {
+        dot.style.transform = "translate(-50%,-50%) scale(1.8)";
+        ring.style.width = "50px";
+        ring.style.height = "50px";
+        ring.style.borderColor = "var(--gold)";
+      });
+      document.addEventListener("mouseup", () => {
+        dot.style.transform = "translate(-50%,-50%) scale(1)";
+        ring.style.width = "36px";
+        ring.style.height = "36px";
+        ring.style.borderColor = "#ff6b8a99";
+      });
+
+      /* ===== PETALS ===== */
+      const pLayer = document.getElementById("petalLayer");
+      const emojis = ["🌸", "🌺", "✿", "🌹", "💮", "🌷", "🍀", "✦", "❀"];
+      for (let i = 0; i < 25; i++) {
+        const p = document.createElement("span");
+        p.className = "petal";
+        p.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        p.style.left = Math.random() * 100 + "%";
+        p.style.animationDuration = 8 + Math.random() * 14 + "s";
+        p.style.animationDelay = -Math.random() * 20 + "s";
+        p.style.fontSize = 0.7 + Math.random() * 0.9 + "rem";
+        pLayer.appendChild(p);
+      }
+
+      /* ===== DRAGGABLE ID CARD ===== */
+      const card = document.getElementById("idCard");
+      let dragging = false,
+        startX,
+        startY,
+        cardX = 0,
+        cardY = 0;
+
+      card.addEventListener("mousedown", (e) => {
+        dragging = true;
+        startX = e.clientX - cardX;
+        startY = e.clientY - cardY;
+        card.style.transition = "none";
+        card.style.zIndex = 100;
+      });
+      document.addEventListener("mousemove", (e) => {
+        if (!dragging) return;
+        cardX = e.clientX - startX;
+        cardY = e.clientY - startY;
+        card.style.transform = `translate(${cardX}px,${cardY}px) rotateY(${cardX / 40}deg) rotateX(${-cardY / 40}deg)`;
+      });
+      document.addEventListener("mouseup", () => {
+        if (!dragging) return;
+        dragging = false;
+        card.style.transition = "transform 0.8s cubic-bezier(.23,1.02,.52,1)";
+        cardX = 0;
+        cardY = 0;
+        card.style.transform = "translate(0,0) rotateY(0) rotateX(0)";
+        setTimeout(() => (card.style.zIndex = ""), 900);
+      });
+
+      /* hearts pop on hover */
+      const cardHearts = document.getElementById("cardHearts");
+      card.addEventListener("mouseenter", () => spawnHearts());
+      function spawnHearts() {
+        const hs = ["💕", "💖", "💗", "💓", "✨", "🌸", "💝"];
+        for (let i = 0; i < 7; i++) {
+          setTimeout(() => {
+            const h = document.createElement("div");
+            h.className = "heart-pop";
+            h.textContent = hs[Math.floor(Math.random() * hs.length)];
+            h.style.left = 10 + Math.random() * 80 + "%";
+            h.style.bottom = 10 + Math.random() * 30 + "%";
+            h.style.animationDelay = Math.random() * 0.4 + "s";
+            cardHearts.appendChild(h);
+            setTimeout(() => h.remove(), 1600);
+          }, i * 80);
+        }
+      }
+
+      /* ===== SKILL CARDS TOGGLE ===== */
+      function toggleCard(id) {
+        const card = document.getElementById(id);
+        const num = id.replace("card", "");
+        const detail = document.getElementById("detail" + num);
+        const isOpen = card.classList.contains("open");
+
+        ["card1", "card2", "card3"].forEach((c) => {
+          document.getElementById(c).classList.remove("open");
+          document
+            .getElementById("detail" + c.replace("card", ""))
+            .classList.remove("open");
+        });
+
+        if (!isOpen) {
+          card.classList.add("open");
+          detail.classList.add("open");
+          burstSparkles(card);
+        }
+      }
+
+      function burstSparkles(card) {
+        const sparks = ["✨", "🌸", "💖", "⭐", "🌟", "✿"];
+        for (let i = 0; i < 8; i++) {
+          const s = document.createElement("div");
+          s.className = "burst burst-pop";
+          s.textContent = sparks[Math.floor(Math.random() * sparks.length)];
+          s.style.left = 10 + Math.random() * 80 + "%";
+          s.style.top = 20 + Math.random() * 60 + "%";
+          s.style.animationDelay = Math.random() * 0.3 + "s";
+          card.appendChild(s);
+          setTimeout(() => s.remove(), 900);
+        }
+      }
+
+      /* ===== CONTACT FORM ===== */
+      function sendMsg() {
+        const n = document.getElementById("msgName").value.trim();
+        const e = document.getElementById("msgEmail").value.trim();
+        const b = document.getElementById("msgBody").value.trim();
+        if (!n || !e || !b) {
+          alert("Please fill all fields 🌸");
+          return;
+        }
+        const t = document.getElementById("toast");
+        t.classList.add("show");
+        setTimeout(() => t.classList.remove("show"), 3500);
+        document.getElementById("msgName").value = "";
+        document.getElementById("msgEmail").value = "";
+        document.getElementById("msgBody").value = "";
+        spawnFloatingHearts();
+      }
+
+      function spawnFloatingHearts() {
+        const hs = ["💕", "💖", "🌸", "✨", "💗"];
+        for (let i = 0; i < 12; i++) {
+          setTimeout(() => {
+            const h = document.createElement("div");
+            h.className = "float-heart";
+            h.textContent = hs[Math.floor(Math.random() * hs.length)];
+            h.style.left = Math.random() * 100 + "vw";
+            h.style.bottom = "20px";
+            h.style.animationDuration = 3 + Math.random() * 2 + "s";
+            document.body.appendChild(h);
+            setTimeout(() => h.remove(), 5000);
+          }, i * 150);
+        }
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => {
+        observer.observe(el);
+        // stagger children
+        const siblings = el.parentElement.querySelectorAll(".reveal");
+        [...siblings].forEach(
+          (s, i) => (s.style.transitionDelay = i * 0.12 + "s"),
+        );
+      });
+    </script>
+
+    <script>
+      (function () {
+        var canvas = document.getElementById("three-canvas");
+        if (!window.THREE || !canvas) return;
+        var renderer = new THREE.WebGLRenderer({
+          canvas: canvas,
+          antialias: true,
+          alpha: true,
+        });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setClearColor(0x000000, 0);
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
+        camera.position.set(0, 0, 18);
+
+        function resize() {
+          var w = canvas.clientWidth || window.innerWidth,
+            h = canvas.clientHeight || window.innerHeight;
+          renderer.setSize(w, h, false);
+          camera.aspect = w / h;
+          camera.updateProjectionMatrix();
+        }
+        resize();
+        window.addEventListener("resize", resize);
+
+        var N = 1800;
+        var geo = new THREE.BufferGeometry();
+        var pos = new Float32Array(N * 3),
+          col = new Float32Array(N * 3);
+        for (var i = 0; i < N; i++) {
+          pos[i * 3] = (Math.random() - 0.5) * 80;
+          pos[i * 3 + 1] = (Math.random() - 0.5) * 80;
+          pos[i * 3 + 2] = (Math.random() - 0.5) * 60;
+          col[i * 3] = 0.55 + Math.random() * 0.45;
+          col[i * 3 + 1] = 0.04 + Math.random() * 0.18;
+          col[i * 3 + 2] = 0.1 + Math.random() * 0.25;
+        }
+        geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+        geo.setAttribute("color", new THREE.BufferAttribute(col, 3));
+        var mat = new THREE.PointsMaterial({
+          size: 0.28,
+          vertexColors: true,
+          transparent: true,
+          opacity: 0.7,
+          sizeAttenuation: true,
+        });
+        scene.add(new THREE.Points(geo, mat));
+
+        var rings = [];
+        for (var j = 0; j < 7; j++) {
+          var rg = new THREE.TorusGeometry(2.5 + j * 0.9, 0.05, 8, 60);
+          var rm = new THREE.MeshBasicMaterial({
+            color: new THREE.Color().setHSL(
+              (0.94 + j * 0.02) % 1,
+              0.7,
+              0.45 + j * 0.04,
+            ),
+            transparent: true,
+            opacity: 0.15 + j * 0.04,
+          });
+          var rm2 = new THREE.Mesh(rg, rm);
+          rm2.position.set(
+            (Math.random() - 0.5) * 22,
+            (Math.random() - 0.5) * 22,
+            (Math.random() - 0.5) * 12,
+          );
+          rm2.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
+          scene.add(rm2);
+          rings.push(rm2);
+        }
+
+        var hearts3d = [];
+        function makeHeart() {
+          var shape = new THREE.Shape();
+          shape.moveTo(0, 0);
+          shape.bezierCurveTo(0, 0.28, 0.55, 0.28, 0.55, 0.1);
+          shape.bezierCurveTo(0.55, -0.08, 0.28, -0.38, 0, -0.62);
+          shape.bezierCurveTo(-0.28, -0.38, -0.55, -0.08, -0.55, 0.1);
+          shape.bezierCurveTo(-0.55, 0.28, 0, 0.28, 0, 0);
+          return new THREE.ShapeGeometry(shape);
+        }
+        for (var k = 0; k < 20; k++) {
+          var hg = makeHeart();
+          var hm = new THREE.MeshBasicMaterial({
+            color: new THREE.Color().setHSL(
+              0.93 + Math.random() * 0.04,
+              0.8,
+              0.62 + Math.random() * 0.1,
+            ),
+            transparent: true,
+            opacity: 0.15 + Math.random() * 0.22,
+            side: THREE.DoubleSide,
+          });
+          var hm2 = new THREE.Mesh(hg, hm);
+          hm2.position.set(
+            (Math.random() - 0.5) * 55,
+            (Math.random() - 0.5) * 55,
+            (Math.random() - 0.5) * 35,
+          );
+          hm2.rotation.z = Math.random() * Math.PI * 2;
+          var sc = 0.4 + Math.random() * 1.8;
+          hm2.scale.set(sc, sc, sc);
+          scene.add(hm2);
+          hearts3d.push({
+            mesh: hm2,
+            rz:
+              (0.003 + Math.random() * 0.009) * (Math.random() < 0.5 ? 1 : -1),
+            dy: (Math.random() - 0.5) * 0.005,
+          });
+        }
+
+        var scrollY = 0;
+        window.addEventListener("scroll", function () {
+          scrollY = window.scrollY;
+        });
+
+        var t = 0;
+        function animate() {
+          requestAnimationFrame(animate);
+          t += 0.005;
+          var heroH =
+            document.getElementById("hero").offsetHeight || window.innerHeight;
+          var prog = Math.min(scrollY / heroH, 1);
+          camera.position.z = 18 - prog * 12;
+          camera.position.y = prog * 5;
+          camera.rotation.x = prog * 0.2;
+          scene.rotation.y = t * 0.1;
+          scene.rotation.x = Math.sin(t * 0.06) * 0.07;
+          rings.forEach(function (r, i) {
+            r.rotation.x += 0.004 + i * 0.002;
+            r.rotation.y += 0.005 + i * 0.001;
+            r.position.y += Math.sin(t + i) * 0.007;
+          });
+          hearts3d.forEach(function (h) {
+            h.mesh.rotation.z += h.rz;
+            h.mesh.position.y += h.dy + Math.sin(t + h.rz * 120) * 0.009;
+          });
+          renderer.render(scene, camera);
+        }
+        animate();
+
+        var layer = document.getElementById("starLayer");
+        for (var s = 0; s < 130; s++) {
+          var sd = document.createElement("div");
+          var sz = 0.7 + Math.random() * 2.2;
+          sd.style.cssText =
+            "position:absolute;border-radius:50%;background:#ffb3c1;width:" +
+            sz +
+            "px;height:" +
+            sz +
+            "px;left:" +
+            Math.random() * 100 +
+            "%;top:" +
+            Math.random() * 100 +
+            "%;animation:twinkle " +
+            (1.5 + Math.random() * 4) +
+            "s " +
+            Math.random() * 5 +
+            "s ease-in-out infinite;";
+          layer.appendChild(sd);
+        }
+      })();
+    </script>
+    <style>
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0.1;
+          transform: scale(0.8);
+        }
+        50% {
+          opacity: 0.85;
+          transform: scale(1.5);
+        }
+      }
+    </style>
+  </body>
+</html>
